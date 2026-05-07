@@ -1,0 +1,980 @@
+/* nuevo */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* BASE */
+body {
+    font-family: 'Inter', sans-serif;
+    background-color: #0a0a0a;
+    color: #ffffff;
+    line-height: 1.6;
+}
+
+/* TIPOGRAFÍA */
+.display {
+    font-family: 'Bebas Neue', sans-serif;
+    letter-spacing: 3px;
+}
+
+
+.split p strong,
+.intro-text strong,
+.text-block p strong,
+.faq-item p strong,
+.highlight p strong {
+    color: #ffffff;
+    font-weight: 600;
+    opacity: 1;
+}
+
+/* CONTENEDOR */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 60px;
+}
+
+/* NAV */
+.nav {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    padding: 25px 60px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: rgba(10, 10, 10, 0.75);
+    backdrop-filter: blur(12px);
+    z-index: 1000;
+    border-bottom: 1px solid rgba(255,255,255,0.05);
+}
+
+.logo {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 1.3rem;
+    letter-spacing: 6px;
+    text-transform: uppercase;
+}
+
+.nav nav a {
+    margin-left: 36px;
+    text-decoration: none;
+    color: rgba(255,255,255,0.6);
+    font-size: 0.78rem;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    transition: color 0.3s;
+}
+
+.nav nav a:hover {
+    color: #ffffff;
+}
+
+.nav nav a.active {
+    color: #ffffff;
+    border-bottom: 1px solid rgba(255,255,255,0.7);
+    padding-bottom: 2px;
+}
+
+/* ============================
+   HERO — INDEX
+============================ */
+.hero {
+    height: 100vh;
+    position: relative;
+    overflow: hidden;
+}
+
+.hero img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center top;
+}
+
+.hero-overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(to top, #0a0a0a 12%, rgba(10,10,10,0.35) 60%, transparent 100%);
+}
+
+.hero-text {
+    position: absolute;
+    bottom: 100px;
+    left: 60px;
+    max-width: 560px;
+}
+
+.hero h1 {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 7rem;
+    font-weight: 400;
+    line-height: 0.95;
+    letter-spacing: 6px;
+}
+
+.hero p {
+    margin-top: 18px;
+    font-size: 1rem;
+    opacity: 0.7;
+    font-weight: 300;
+    letter-spacing: 1px;
+    max-width: 420px;
+}
+
+/* ============================
+   INTRO
+============================ */
+.intro {
+    padding: 120px 60px;
+    text-align: center;
+    border-bottom: 1px solid rgba(255,255,255,0.07);
+}
+
+.intro-text {
+    max-width: 720px;
+    margin: auto;
+    font-size: 1.25rem;
+    line-height: 1.85;
+    opacity: 0.8;
+    font-weight: 300;
+}
+
+/* ============================
+   GRID HOME
+============================ */
+.grid-home {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+.grid-item {
+    position: relative;
+    overflow: hidden;
+}
+
+.grid-item img {
+    width: 100%;
+    height: 480px;
+    object-fit: cover;
+    transition: transform 0.6s ease;
+    display: block;
+}
+
+.grid-item:hover img {
+    transform: scale(1.04);
+}
+
+.grid-item-overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(to top, rgba(10,10,10,0.8) 0%, transparent 55%);
+}
+
+.grid-text {
+    position: absolute;
+    bottom: 36px;
+    left: 36px;
+}
+
+.grid-text h3 {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 2.6rem;
+    font-weight: 400;
+    letter-spacing: 4px;
+    margin-bottom: 10px;
+}
+
+.grid-text a {
+    display: inline-block;
+    font-size: 0.78rem;
+    color: rgba(255,255,255,0.7);
+    text-decoration: none;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    border-bottom: 1px solid rgba(255,255,255,0.4);
+    padding-bottom: 2px;
+    transition: color 0.2s, border-color 0.2s;
+}
+
+.grid-text a:hover {
+    color: #fff;
+    border-color: #fff;
+}
+
+/* ============================
+   HERO PÁGINAS INTERNAS
+============================ */
+.evento-hero {
+    height: 78vh;
+    position: relative;
+    overflow: hidden;
+}
+
+.evento-hero img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center 20%;
+    display: block;
+}
+
+.evento-overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(to top, #0a0a0a 8%, rgba(10,10,10,0.4) 55%, transparent 100%);
+}
+
+.evento-hero-text {
+    position: absolute;
+    bottom: 80px;
+    left: 60px;
+    max-width: 600px;
+}
+
+.evento-hero-text h1 {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 5rem;
+    font-weight: 400;
+    line-height: 1;
+    letter-spacing: 4px;
+}
+
+.evento-hero-text p {
+    margin-top: 14px;
+    font-size: 0.8rem;
+    opacity: 0.5;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+}
+
+/* ============================
+   SECCIONES GENERALES
+============================ */
+.section {
+    padding: 120px 0;
+}
+
+.title {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 4rem;
+    font-weight: 400;
+    margin-bottom: 70px;
+    line-height: 1;
+    letter-spacing: 4px;
+}
+
+/* ============================
+   LAYOUT SPLIT
+============================ */
+.split {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 80px;
+    margin-bottom: 100px;
+    align-items: center;
+}
+
+.split:last-child {
+    margin-bottom: 0;
+}
+
+.reverse {
+    direction: rtl;
+}
+
+.reverse * {
+    direction: ltr;
+}
+
+.split h2 {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 2.8rem;
+    font-weight: 400;
+    margin-bottom: 20px;
+    line-height: 1;
+    letter-spacing: 3px;
+}
+
+.split p {
+    font-size: 0.95rem;
+    opacity: 0.75;
+    line-height: 1.8;
+}
+
+/* ============================
+   HIGHLIGHT
+============================ */
+.highlight {
+    background: linear-gradient(180deg, #131313 0%, #0e0e0e 100%);
+    padding: 110px 60px 0;
+    text-align: center;
+    border-top: 1px solid rgba(255,255,255,0.06);
+    border-bottom: 1px solid rgba(255,255,255,0.06);
+}
+
+.highlight-eyebrow {
+    display: block;
+    font-size: 0.68rem;
+    letter-spacing: 5px;
+    text-transform: uppercase;
+    color: rgba(255,255,255,0.28);
+    margin-bottom: 28px;
+}
+
+.highlight h2 {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 5.5rem;
+    font-weight: 400;
+    margin-bottom: 24px;
+    max-width: 820px;
+    margin-left: auto;
+    margin-right: auto;
+    line-height: 0.95;
+    letter-spacing: 4px;
+}
+
+.highlight p {
+    font-size: 1rem;
+    opacity: 0.5;
+    max-width: 500px;
+    margin: 0 auto;
+    line-height: 1.85;
+    font-weight: 300;
+}
+
+/* ============================
+   GRILLA  — PÁGINA EVENTO
+============================ */
+.info-cards {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    border-top: 1px solid rgba(255,255,255,0.07);
+}
+
+.info-card {
+    border-right: 1px solid rgba(255,255,255,0.07);
+    border-bottom: 1px solid rgba(255,255,255,0.07);
+    display: flex;
+    flex-direction: column;
+}
+
+.info-card:nth-child(3),
+.info-card:nth-child(6) {
+    border-right: none;
+}
+
+.info-card-img {
+    overflow: hidden;
+    flex-shrink: 0;
+}
+
+.info-card-img img {
+    width: 100%;
+    height: 240px;
+    object-fit: cover;
+    display: block;
+    transition: transform 0.6s ease;
+}
+
+.info-card:hover .info-card-img img {
+    transform: scale(1.04);
+}
+
+.info-card-body {
+    padding: 36px 36px 44px;
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+}
+
+.info-card-label {
+    display: block;
+    font-size: 0.62rem;
+    letter-spacing: 4px;
+    text-transform: uppercase;
+    color: rgba(255,255,255,0.25);
+    margin-bottom: 14px;
+}
+
+.info-card-body h3 {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 1.8rem;
+    font-weight: 400;
+    letter-spacing: 2px;
+    margin-bottom: 16px;
+    line-height: 1.05;
+}
+
+.info-card-body p {
+    font-size: 0.88rem;
+    opacity: 0.6;
+    line-height: 1.8;
+    flex: 1;
+}
+
+.info-card-body .link-accion {
+    margin-top: 20px;
+}
+
+
+.stat-value {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 4rem !important;
+    letter-spacing: 3px;
+    line-height: 1 !important;
+    margin-bottom: 14px !important;
+    color: #fff;
+}
+
+
+.fw-image {
+    position: relative;
+    height: 520px;
+    overflow: hidden;
+}
+
+.fw-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center 30%;
+    display: block;
+}
+
+.fw-image-overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(to bottom, rgba(10,10,10,0.25) 0%, rgba(10,10,10,0.55) 100%);
+}
+
+/* SECCIÓN MERCH */
+.merch-section {
+    padding: 120px 60px;
+    text-align: center;
+    border-bottom: 1px solid rgba(255,255,255,0.07);
+}
+
+.merch-section h2 {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 5rem;
+    font-weight: 400;
+    letter-spacing: 6px;
+    line-height: 1;
+    margin-bottom: 28px;
+}
+
+.merch-section p {
+    font-size: 1rem;
+    opacity: 0.6;
+    max-width: 520px;
+    margin: 0 auto;
+    line-height: 1.85;
+    font-weight: 300;
+}
+
+/* DATOS DEL EVENTO */
+.datos-evento {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    margin-top: 90px;
+    border-top: 1px solid rgba(255,255,255,0.08);
+}
+
+.dato-item {
+    padding: 48px 40px;
+    border-right: 1px solid rgba(255,255,255,0.08);
+    text-align: left;
+}
+
+.dato-item:nth-child(3),
+.dato-item:nth-child(6) {
+    border-right: none;
+}
+
+.dato-item:nth-child(4),
+.dato-item:nth-child(5),
+.dato-item:nth-child(6) {
+    border-top: 1px solid rgba(255,255,255,0.08);
+}
+
+.dato-item span {
+    display: block;
+    font-size: 0.62rem;
+    letter-spacing: 4px;
+    text-transform: uppercase;
+    color: rgba(255,255,255,0.25);
+    margin-bottom: 14px;
+}
+
+.dato-item p {
+    font-family: 'Inter', sans-serif;
+    font-size: 1.05rem;
+    font-weight: 600;
+    letter-spacing: 0.3px;
+    opacity: 1 !important;
+    line-height: 1.3;
+    color: #fff;
+}
+
+/* IMÁGENES EN SPLIT */
+.split img {
+    width: 100%;
+    height: 440px;
+    object-fit: cover;
+    display: block;
+}
+
+/* ============================
+   CÓMO LLEGAR
+============================ */
+.text-block h2 {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 2.4rem;
+    margin-bottom: 20px;
+    font-weight: 400;
+    letter-spacing: 3px;
+}
+
+.text-block p {
+    opacity: 0.75;
+    font-size: 0.95rem;
+    line-height: 1.8;
+    margin-bottom: 16px;
+}
+
+.data {
+    list-style: none;
+    margin-top: 28px;
+    border-top: 1px solid rgba(255,255,255,0.08);
+}
+
+.data li {
+    padding: 16px 0;
+    border-bottom: 1px solid rgba(255,255,255,0.08);
+    font-size: 0.9rem;
+    display: flex;
+    gap: 14px;
+    align-items: flex-start;
+}
+
+.data li strong {
+    color: #fff;
+    min-width: 110px;
+    opacity: 1;
+    font-size: 0.78rem;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    padding-top: 2px;
+}
+
+.data li span {
+    opacity: 0.6;
+    line-height: 1.6;
+}
+
+.map-full {
+    margin-top: 80px;
+}
+
+.map-full iframe {
+    width: 100%;
+    height: 460px;
+    border: none;
+    display: block;
+    filter: grayscale(25%) contrast(1.1);
+}
+
+/* ============================
+   PÁGINA CONTACTO
+============================ */
+.contacto-section {
+    padding: 80px 0 100px;
+}
+
+.contacto-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 100px;
+    align-items: start;
+}
+
+.contacto-eyebrow {
+    display: block;
+    font-size: 0.62rem;
+    letter-spacing: 4px;
+    text-transform: uppercase;
+    color: rgba(255,255,255,0.25);
+    margin-bottom: 14px;
+}
+
+.contacto-titulo {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 2.8rem;
+    font-weight: 400;
+    letter-spacing: 3px;
+    line-height: 1;
+    margin-bottom: 36px;
+}
+
+/*  FAQ */
+.faq-acordeon {
+    border-top: 1px solid rgba(255,255,255,0.08);
+}
+
+.faq-item {
+    border-bottom: 1px solid rgba(255,255,255,0.08);
+}
+
+.faq-trigger {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 16px;
+    padding: 20px 0;
+    background: transparent;
+    border: none;
+    color: #fff;
+    cursor: pointer;
+    text-align: left;
+    font-family: 'Inter', sans-serif;
+    font-size: 0.88rem;
+    font-weight: 600;
+    letter-spacing: 0.3px;
+    transition: opacity 0.2s;
+}
+
+.faq-trigger:hover {
+    opacity: 0.7;
+}
+
+.faq-icon {
+    font-size: 1.3rem;
+    font-weight: 300;
+    line-height: 1;
+    flex-shrink: 0;
+    color: rgba(255,255,255,0.4);
+    transition: transform 0.3s ease, color 0.2s;
+}
+
+.faq-item.open .faq-icon {
+    color: #fff;
+}
+
+.faq-body {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.35s ease, padding 0.3s ease;
+}
+
+.faq-body p {
+    padding-bottom: 20px;
+    font-size: 0.85rem;
+    opacity: 0.55;
+    line-height: 1.8;
+}
+
+.faq-item.open .faq-body {
+    max-height: 200px;
+}
+
+/* ============================
+   FORMULARIO + FAQ
+============================ */
+.form-block input,
+.form-block textarea {
+    width: 100%;
+    padding: 14px 0;
+    margin-bottom: 24px;
+    border: none;
+    border-bottom: 1px solid rgba(255,255,255,0.12);
+    background: transparent;
+    color: white;
+    font-size: 0.9rem;
+    font-family: 'Inter', sans-serif;
+    outline: none;
+    transition: border-color 0.3s;
+}
+
+.form-block input::placeholder,
+.form-block textarea::placeholder {
+    color: rgba(255,255,255,0.25);
+}
+
+.form-block input:focus,
+.form-block textarea:focus {
+    border-bottom-color: rgba(255,255,255,0.55);
+}
+
+.form-block textarea {
+    min-height: 130px;
+    resize: none;
+}
+
+.form-block button {
+    margin-top: 10px;
+    padding: 14px 44px;
+    background: white;
+    color: black;
+    border: none;
+    cursor: pointer;
+    font-size: 0.75rem;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    font-family: 'Inter', sans-serif;
+    font-weight: 600;
+    transition: opacity 0.3s;
+}
+
+.form-block button:hover {
+    opacity: 0.75;
+}
+
+/* (FAQ accordion styles moved to sección CONTACTO) */
+
+/* ============================
+   FOOTER
+============================ */
+footer {
+    padding: 52px 60px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-top: 1px solid rgba(255,255,255,0.07);
+}
+
+/* ============================
+   BOTÓN - tickets
+============================ */
+.btn-hero {
+    display: inline-block;
+    margin-top: 28px;
+    padding: 13px 36px;
+    border: 1px solid rgba(255,255,255,0.55);
+    border-radius: 100px;
+    font-family: 'Inter', sans-serif;
+    font-size: 0.72rem;
+    font-weight: 600;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    text-decoration: none;
+    color: #fff;
+    transition: background 0.25s ease, color 0.25s ease, border-color 0.25s ease;
+}
+
+.btn-hero:hover {
+    background: #fff;
+    color: #000;
+    border-color: #fff;
+}
+
+/* ============================
+   LINKS  (setlist, merch, etc.)
+============================ */
+.link-accion {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    margin-top: 24px;
+    font-family: 'Inter', sans-serif;
+    font-size: 0.72rem;
+    font-weight: 600;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    text-decoration: none;
+    color: rgba(255,255,255,0.55);
+    border-bottom: 1px solid rgba(255,255,255,0.2);
+    padding-bottom: 3px;
+    transition: color 0.2s ease, border-color 0.2s ease;
+}
+
+.link-accion:hover {
+    color: #fff;
+    border-color: rgba(255,255,255,0.7);
+}
+
+/* ============================
+   SECCIÓN WORLD TOUR
+============================ */
+.world-tour {
+    padding: 100px 60px;
+    border-bottom: 1px solid rgba(255,255,255,0.07);
+}
+
+.world-tour-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    margin-bottom: 60px;
+}
+
+.world-tour-header h2 {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 4rem;
+    letter-spacing: 6px;
+    line-height: 1;
+}
+
+.world-tour-header a {
+    font-size: 0.75rem;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: rgba(255,255,255,0.45);
+    text-decoration: none;
+    border-bottom: 1px solid rgba(255,255,255,0.2);
+    padding-bottom: 2px;
+    transition: color 0.2s;
+}
+
+.world-tour-header a:hover { color: #fff; }
+
+.tour-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 0 80px;
+}
+
+.tour-fila {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 18px 0;
+    border-bottom: 1px solid rgba(255,255,255,0.07);
+    gap: 16px;
+}
+
+.tour-fila:last-child { border-bottom: none; }
+
+.tour-info { flex: 1; }
+
+.tour-fecha {
+    font-size: 0.95rem;
+    font-weight: 600;
+    color: #fff;
+    margin-bottom: 3px;
+}
+
+.tour-lugar {
+    font-size: 0.8rem;
+    color: rgba(255,255,255,0.4);
+    letter-spacing: 0.5px;
+}
+
+.btn-sold-out {
+    padding: 8px 18px;
+    font-size: 0.65rem;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    font-family: 'Inter', sans-serif;
+    font-weight: 700;
+    background: #c0392b;
+    color: #fff;
+    border: none;
+    border-radius: 40px;
+    white-space: nowrap;
+    flex-shrink: 0;
+}
+
+.btn-ticket {
+    padding: 8px 18px;
+    font-size: 0.65rem;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    font-family: 'Inter', sans-serif;
+    font-weight: 600;
+    background: transparent;
+    color: rgba(255,255,255,0.6);
+    border: 1px solid rgba(255,255,255,0.25);
+    border-radius: 40px;
+    text-decoration: none;
+    white-space: nowrap;
+    flex-shrink: 0;
+    transition: background 0.2s, color 0.2s;
+}
+
+.btn-ticket:hover {
+    background: #fff;
+    color: #000;
+}
+
+.tour-separador {
+    grid-column: 1 / -1;
+    height: 1px;
+    background: rgba(255,255,255,0.12);
+    margin: 16px 0;
+}
+
+/* ============================
+   PÁGINA TICKETS — encabezado
+============================ */
+.tickets-hero {
+    padding: 160px 60px 80px;
+    border-bottom: 1px solid rgba(255,255,255,0.07);
+}
+
+.tickets-hero h1 {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 6rem;
+    letter-spacing: 8px;
+    line-height: 0.95;
+    margin-bottom: 24px;
+}
+
+.tickets-hero p {
+    font-size: 0.9rem;
+    color: rgba(255,255,255,0.45);
+    letter-spacing: 2px;
+    text-transform: uppercase;
+}
+
+.tickets-seccion {
+    padding: 80px 60px;
+    border-bottom: 1px solid rgba(255,255,255,0.07);
+}
+
+.tickets-seccion-titulo {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 1.4rem;
+    letter-spacing: 6px;
+    color: rgba(255,255,255,0.3);
+    margin-bottom: 32px;
+    text-transform: uppercase;
+}
+
+/* ============================
+   FOOTER
+============================ */
+.footer-logo {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 0.95rem;
+    letter-spacing: 4px;
+    text-transform: uppercase;
+}
+
+.footer-copy {
+    font-size: 0.72rem;
+    opacity: 0.3;
+    letter-spacing: 1px;
+}
+
+.footer-links {
+    display: flex;
+    gap: 28px;
+}
+
+.footer-links a {
+    font-size: 0.72rem;
+    color: rgba(255,255,255,0.35);
+    text-decoration: none;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    transition: color 0.2s;
+}
+
+.footer-links a:hover {
+    color: #fff;
+}
