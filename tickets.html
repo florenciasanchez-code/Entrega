@@ -12,7 +12,13 @@
 
 <header class="nav">
     <div class="logo">FUTTTURA</div>
-    <nav>
+    <input type="checkbox" id="menu-toggle" class="menu-toggle" aria-label="Abrir menú">
+    <label for="menu-toggle" class="menu-btn" aria-label="Abrir menú">
+        <span></span>
+        <span></span>
+        <span></span>
+    </label>
+    <nav class="nav-menu">
         <a href="index.html">Inicio</a>
         <a href="info.html">Evento</a>
         <a href="llegar.html">Cómo llegar</a>
@@ -23,11 +29,290 @@
 
 <main>
 
+
     <!-- ENCABEZADO -->
-    <div class="tickets-hero">
-        <h1>World<br>Tour</h1>
-        <p>FUTTTURA — The Experience · 2025 / 2027</p>
+    <div class="tickets-hero tickets-hero--shop">
+        <span class="compra-eyebrow">Tickets oficiales</span>
+        <h1>Elegí tu<br>experiencia</h1>
+        <p>FUTTTURA — The Experience · Tecnópolis Buenos Aires</p>
+        <a href="#experiencias" class="btn-hero">Comprar ahora</a>
     </div>
+
+    <!-- EXPERIENCIAS / TIENDA ONLINE -->
+    <section class="compra-online" id="experiencias">
+        <div class="compra-header compra-header--wide">
+            <span class="compra-eyebrow">Tienda online oficial</span>
+            <h2>Entradas disponibles</h2>
+            <p>
+                Seleccioná el tipo de acceso para vivir FUTTTURA en Tecnópolis. Todas las entradas son digitales,
+                se envían por correo electrónico e incluyen código QR personal para ingresar al predio.
+            </p>
+        </div>
+
+        <div class="productos-grid productos-grid--tickets">
+            <article class="producto-card producto-card--destacado is-selected" data-product="general">
+                <span class="producto-label">Acceso general</span>
+                <h3>FUTTTURA General</h3>
+                <p>
+                    Entrada individual con acceso al predio, instalaciones inmersivas, escenarios secundarios,
+                    foodtrucks, zonas de descanso y show principal de TINI.
+                </p>
+                <ul class="producto-beneficios">
+                    <li>Ingreso desde las 16:00 hs.</li>
+                    <li>Acceso a los tres escenarios.</li>
+                    <li>QR digital enviado por mail.</li>
+                </ul>
+                <div class="producto-footer">
+                    <div class="producto-precio">$75.000</div>
+                    <button class="btn-ticket elegir-producto" type="button"
+                            data-title="FUTTTURA General"
+                            data-subtitle="Acceso general · Tecnópolis Buenos Aires"
+                            data-price="75000"
+                            data-service="4500">
+                        Elegir
+                    </button>
+                </div>
+            </article>
+
+            <article class="producto-card" data-product="vip">
+                <span class="producto-label">Más elegida</span>
+                <h3>FUTTTURA VIP</h3>
+                <p>
+                    Experiencia con ingreso prioritario, sector preferencial frente al escenario principal,
+                    pulsera exclusiva y acceso a activaciones especiales dentro del predio.
+                </p>
+                <ul class="producto-beneficios">
+                    <li>Ingreso prioritario.</li>
+                    <li>Sector preferencial.</li>
+                    <li>Pulsera FUTTTURA VIP.</li>
+                </ul>
+                <div class="producto-footer">
+                    <div class="producto-precio">$120.000</div>
+                    <button class="btn-ticket elegir-producto" type="button"
+                            data-title="FUTTTURA VIP"
+                            data-subtitle="Ingreso prioritario · Sector preferencial"
+                            data-price="120000"
+                            data-service="6500">
+                        Elegir
+                    </button>
+                </div>
+            </article>
+
+            <article class="producto-card" data-product="pack">
+                <span class="producto-label">Pack oficial</span>
+                <h3>Fan Pack</h3>
+                <p>
+                    Combo pensado para vivir la experiencia completa: entrada general, remera oficial del tour,
+                    tote bag coleccionable y acceso a preventa de merch online.
+                </p>
+                <ul class="producto-beneficios">
+                    <li>Entrada general incluida.</li>
+                    <li>Remera + tote bag oficial.</li>
+                    <li>Retiro express en el predio.</li>
+                </ul>
+                <div class="producto-footer">
+                    <div class="producto-precio">$145.000</div>
+                    <button class="btn-ticket elegir-producto" type="button"
+                            data-title="FUTTTURA Fan Pack"
+                            data-subtitle="Entrada general + merch oficial"
+                            data-price="145000"
+                            data-service="7500">
+                        Elegir
+                    </button>
+                </div>
+            </article>
+        </div>
+    </section>
+
+    <!-- CARRITO DE COMPRAS -->
+    <section class="carrito-section" id="carrito">
+        <div class="checkout-intro">
+            <span class="compra-eyebrow">Pedido actual</span>
+            <h2>Carrito</h2>
+            <p>Revisá tu selección antes de avanzar al pago. Podés cambiar el tipo de entrada desde la sección anterior.</p>
+        </div>
+
+        <div class="carrito-layout carrito-layout--store">
+            <div class="carrito-lista carrito-lista--store">
+                <article class="carrito-item carrito-item--principal">
+                    <div class="carrito-thumb">FT</div>
+                    <div class="carrito-item-info">
+                        <span>Producto seleccionado</span>
+                        <h3 id="cart-title">FUTTTURA General</h3>
+                        <p id="cart-subtitle">Acceso general · Tecnópolis Buenos Aires</p>
+                    </div>
+                    <div class="carrito-cantidad">×1</div>
+                    <strong id="cart-price">$75.000</strong>
+                </article>
+
+                <article class="carrito-item carrito-item--servicio">
+                    <div class="carrito-thumb carrito-thumb--small">QR</div>
+                    <div class="carrito-item-info">
+                        <span>Gestión digital</span>
+                        <h3>Cargo de servicio</h3>
+                        <p>Emisión de entrada digital, validación de compra y envío de QR.</p>
+                    </div>
+                    <div class="carrito-cantidad">×1</div>
+                    <strong id="cart-service">$4.500</strong>
+                </article>
+            </div>
+
+            <aside class="carrito-total carrito-total--store">
+                <span class="compra-eyebrow">Resumen de compra</span>
+                <div class="resumen-linea">
+                    <span>Entrada</span>
+                    <strong id="summary-product">$75.000</strong>
+                </div>
+                <div class="resumen-linea">
+                    <span>Servicio</span>
+                    <strong id="summary-service">$4.500</strong>
+                </div>
+                <div class="resumen-linea">
+                    <span>Entrega</span>
+                    <strong>QR digital</strong>
+                </div>
+                <div class="resumen-total">
+                    <span>Total</span>
+                    <strong id="summary-total">$79.500</strong>
+                </div>
+                <a href="#checkout" class="btn-carrito" id="go-checkout">Continuar al pago</a>
+            </aside>
+        </div>
+    </section>
+
+    <!-- PASARELA DE PAGO -->
+    <section class="checkout-section checkout-section--real" id="checkout">
+        <div class="checkout-intro">
+            <span class="compra-eyebrow">Pago seguro</span>
+            <h2>Finalizar compra</h2>
+            <p>Completá tus datos, elegí el método de pago y confirmá el pedido para recibir la entrada digital.</p>
+        </div>
+
+        <div class="checkout-shell">
+            <div class="checkout-progreso checkout-progreso--tabs" role="tablist" aria-label="Pasos de compra">
+                <button class="checkout-tab active" type="button" data-step="1">01 Datos</button>
+                <button class="checkout-tab" type="button" data-step="2">02 Pago</button>
+                <button class="checkout-tab" type="button" data-step="3">03 Confirmación</button>
+            </div>
+
+            <article class="checkout-pantalla active" id="step-1">
+                <div class="paso-numero">01</div>
+                <div class="checkout-contenido">
+                    <span class="compra-eyebrow">Datos personales</span>
+                    <h3>Información del titular</h3>
+                    <p>La entrada queda asociada al nombre y documento ingresados. El QR se enviará al correo de contacto.</p>
+                    <div class="checkout-form">
+                        <div class="form-doble">
+                            <input type="text" placeholder="Nombre completo">
+                            <input type="email" placeholder="Correo electrónico">
+                        </div>
+                        <div class="form-doble">
+                            <input type="text" placeholder="DNI / Pasaporte">
+                            <input type="text" placeholder="Teléfono">
+                        </div>
+                        <input type="text" placeholder="Dirección de facturación">
+                    </div>
+                    <button class="btn-confirmar next-step" type="button" data-next="2">Continuar</button>
+                </div>
+            </article>
+
+            <article class="checkout-pantalla" id="step-2">
+                <div class="paso-numero">02</div>
+                <div class="checkout-contenido">
+                    <span class="compra-eyebrow">Método de pago</span>
+                    <h3>Elegí cómo pagar</h3>
+                    <p>Podés abonar con tarjeta de crédito, débito o transferencia bancaria. Las cuotas disponibles se muestran al confirmar el medio de pago.</p>
+                    <div class="metodos-pago metodos-pago--select">
+                        <button class="metodo active" type="button">Crédito</button>
+                        <button class="metodo" type="button">Débito</button>
+                        <button class="metodo" type="button">Transferencia</button>
+                    </div>
+                    <div class="checkout-form">
+                        <input type="text" placeholder="Número de tarjeta">
+                        <input type="text" placeholder="Nombre como figura en la tarjeta">
+                        <div class="form-doble">
+                            <input type="text" placeholder="Vencimiento MM/AA">
+                            <input type="text" placeholder="Código de seguridad">
+                        </div>
+                    </div>
+                    <button class="btn-confirmar next-step" type="button" data-next="3">Revisar pedido</button>
+                </div>
+            </article>
+
+            <article class="checkout-pantalla checkout-pantalla--final" id="step-3">
+                <div class="paso-numero">03</div>
+                <div class="checkout-contenido">
+                    <span class="compra-eyebrow">Confirmación</span>
+                    <h3>Confirmá tu compra</h3>
+                    <p>Antes de finalizar, verificá que la entrada, el importe y el método de entrega sean correctos.</p>
+                    <div class="confirmacion-box confirmacion-box--real">
+                        <div>
+                            <span>Producto</span>
+                            <strong id="confirm-title">FUTTTURA General</strong>
+                        </div>
+                        <div>
+                            <span>Total a pagar</span>
+                            <strong id="confirm-total">$79.500</strong>
+                        </div>
+                        <div>
+                            <span>Entrega</span>
+                            <strong>Entrada QR digital</strong>
+                        </div>
+                    </div>
+                    <button type="button" class="btn-confirmar" id="confirm-buy">Comprar entrada</button>
+                    <p class="checkout-success" id="checkout-success">Compra confirmada. Revisá tu correo para descargar la entrada digital.</p>
+                </div>
+            </article>
+        </div>
+    </section>
+
+    <!-- MIS COMPRAS -->
+    <section class="ordenes-section ordenes-section--account" id="mis-compras">
+        <div class="ordenes-header">
+            <span class="compra-eyebrow">Mi cuenta</span>
+            <h2>Mis compras</h2>
+            <p>Desde esta sección podés consultar tus entradas, descargar códigos QR y revisar el estado de pedidos anteriores.</p>
+        </div>
+
+        <div class="ordenes-dashboard ordenes-dashboard--account">
+            <article class="orden-card orden-card--grande">
+                <span class="orden-id">Orden #FTT-1024</span>
+                <h3>FUTTTURA VIP · Buenos Aires</h3>
+                <p>24 oct., 2025 · Tecnópolis</p>
+                <div class="orden-actions">
+                    <a href="#checkout" class="link-accion">Ver QR</a>
+                    <a href="#carrito" class="link-accion">Comprar otra entrada</a>
+                </div>
+                <div class="orden-meta">
+                    <span>2 entradas</span>
+                    <span>$240.000</span>
+                    <strong>Confirmada</strong>
+                </div>
+            </article>
+
+            <article class="orden-card">
+                <span class="orden-id">Orden #FTT-0988</span>
+                <h3>Fan Pack</h3>
+                <p>Remera Tour + tote bag · Retiro en predio</p>
+                <div class="orden-meta">
+                    <span>1 pack</span>
+                    <span>$145.000</span>
+                    <strong>Preparando</strong>
+                </div>
+            </article>
+
+            <article class="orden-card">
+                <span class="orden-id">Orden #FTT-0861</span>
+                <h3>FUTTTURA General · Montevideo</h3>
+                <p>22 feb., 2026 · Estadio Centenario</p>
+                <div class="orden-meta">
+                    <span>1 entrada</span>
+                    <span>$75.000</span>
+                    <strong>Finalizada</strong>
+                </div>
+            </article>
+        </div>
+    </section>
 
     <!-- BUENOS AIRES -->
     <section class="tickets-seccion">
@@ -309,6 +594,69 @@
         <a href="https://open.spotify.com/intl-es/artist/7vXDAI8JwjW531ouMGbfcp"_blank">Spotify</a>
     </div>
 </footer>
+
+
+<script>
+    const formatARS = (value) => new Intl.NumberFormat('es-AR').format(value);
+
+    function setProduct(button) {
+        const title = button.dataset.title;
+        const subtitle = button.dataset.subtitle;
+        const price = Number(button.dataset.price);
+        const service = Number(button.dataset.service);
+        const total = price + service;
+
+        document.querySelectorAll('.producto-card').forEach(card => card.classList.remove('is-selected'));
+        button.closest('.producto-card').classList.add('is-selected');
+
+        document.getElementById('cart-title').textContent = title;
+        document.getElementById('cart-subtitle').textContent = subtitle;
+        document.getElementById('cart-price').textContent = '$' + formatARS(price);
+        document.getElementById('cart-service').textContent = '$' + formatARS(service);
+        document.getElementById('summary-product').textContent = '$' + formatARS(price);
+        document.getElementById('summary-service').textContent = '$' + formatARS(service);
+        document.getElementById('summary-total').textContent = '$' + formatARS(total);
+        document.getElementById('confirm-title').textContent = title;
+        document.getElementById('confirm-total').textContent = '$' + formatARS(total);
+        document.getElementById('checkout-success').classList.remove('visible');
+    }
+
+    document.querySelectorAll('.elegir-producto').forEach(button => {
+        button.addEventListener('click', () => {
+            setProduct(button);
+            document.getElementById('carrito').scrollIntoView({ behavior: 'smooth' });
+        });
+    });
+
+    function showStep(step) {
+        document.querySelectorAll('.checkout-tab').forEach(tab => {
+            tab.classList.toggle('active', tab.dataset.step === String(step));
+        });
+        document.querySelectorAll('.checkout-pantalla').forEach(panel => {
+            panel.classList.toggle('active', panel.id === 'step-' + step);
+        });
+        document.getElementById('checkout').scrollIntoView({ behavior: 'smooth' });
+    }
+
+    document.querySelectorAll('.checkout-tab').forEach(tab => {
+        tab.addEventListener('click', () => showStep(tab.dataset.step));
+    });
+
+    document.querySelectorAll('.next-step').forEach(button => {
+        button.addEventListener('click', () => showStep(button.dataset.next));
+    });
+
+    document.querySelectorAll('.metodo').forEach(button => {
+        button.addEventListener('click', () => {
+            document.querySelectorAll('.metodo').forEach(metodo => metodo.classList.remove('active'));
+            button.classList.add('active');
+        });
+    });
+
+    document.getElementById('confirm-buy').addEventListener('click', () => {
+        document.getElementById('checkout-success').classList.add('visible');
+    });
+</script>
 
 </body>
 </html>

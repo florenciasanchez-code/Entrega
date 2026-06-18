@@ -12,7 +12,13 @@
 
 <header class="nav">
     <div class="logo">FUTTTURA</div>
-    <nav>
+    <input type="checkbox" id="menu-toggle" class="menu-toggle" aria-label="Abrir menú">
+    <label for="menu-toggle" class="menu-btn" aria-label="Abrir menú">
+        <span></span>
+        <span></span>
+        <span></span>
+    </label>
+    <nav class="nav-menu">
         <a href="index.html">Inicio</a>
         <a href="info.html">Evento</a>
         <a href="llegar.html" class="active">Cómo llegar</a>
@@ -21,7 +27,7 @@
     </nav>
 </header>
 
-<main>
+<main class="llegar-page">
 
     <!-- HERO INTERNO -->
     <section class="evento-hero">
@@ -76,8 +82,8 @@
                 </ul>
             </div>
 
-            <div>
-                <img src="img/llegar.jpg" alt="Tecnópolis" style="width:100%; height:500px; object-fit:cover; display:block;">
+            <div class="llegar-img-wrap">
+                <img src="img/llegar.jpg" alt="Tecnópolis" class="llegar-img">
             </div>
 
         </div>
